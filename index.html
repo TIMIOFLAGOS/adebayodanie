@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+      // Apply saved/system theme before first paint to avoid a flash of the wrong theme
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <img class="logo" src="./images/images/LOGO-WW.png" alt="Logo" />
+
+        <nav class="nav-items">
+          <a class="nav-item" href="#about">About</a>
+          <a class="nav-item" href="#projects">Projects</a>
+          <a class="nav-item" href="#contact">Contact</a>
+        </nav>
+
+        <button
+          class="mode-toggle"
+          id="modeToggle"
+          type="button"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Hamburger toggle for mobile dropdown -->
+        <button
+          class="toggle-btn"
+          id="toggleBtn"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Mobile dropdown menu -->
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li><a class="nav-item" href="#about">About</a></li>
+            <li><a class="nav-item" href="#projects">Projects</a></li>
+            <li><a class="nav-item" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- header -->
+
+      <!-- hero-section -->
+      <div class="hero">
+        <div class="hero-text">
+          <p class="hero-name reveal-up">Adebayo Daniel</p>
+          <p class="hero-course reveal-up delay-1">Frontend Developer.</p>
+          <p class="hero-description reveal-up delay-2">
+            I'm a Frontend Developer passionate about crafting immersive and
+            responsive user experiences using the latest frontend technologies
+            and frameworks. I specialize in transforming creative visions into
+            functional, high-performance web applications that are both visually
+            engaging and user-friendly.
+          </p>
+
+          <div class="get reveal-up delay-3">
+            <a class="hero-button" href="#contact">Get in Touch</a>
+
+            <div class="available">
+              <p><img src="./images/images/Ellipse 2.png" alt="" />Available now</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image reveal-right">
+          <img src="./images/images/Create_professional_headshot_fro…_20260922105805.jpeg" alt="Adebayo Daniel" />
+        </div>
+      </div>
+      <!-- hero-section -->
+
+      <!-- about -->
+      <div id="about" class="real-about">
+        <div class="about">
+          <div class="about-image reveal-left">
+            <img src="./images/images/Add_navy_blue_line_20260922115100.jpeg" alt="About me" class="rec-11" />
+          </div>
+
+          <div class="about-text reveal-right">
+            <div class="text-0">
+              <p class="text-1">About Me</p>
+
+              <h5 class="text-2">
+                <img src="./images/images/about-line.png" alt="" /> Who Am I ?
+              </h5>
+            </div>
+
+            <section class="text-skills">
+              <p class="text-3">
+                I'm an undergraduate student at Adeleke University, studying
+                Computer Science. I'm a passionate front-end developer with
+                experience in HTML, CSS, JavaScript, and React. I enjoy creating
+                clean, responsive, and user-focused web interfaces. I'm
+                currently expanding my skills in modern web technologies and
+                aiming to become a full-stack developer in the future. I'm
+                always open to learning, collaborating on projects, and
+                contributing to impactful tech solutions. I'm currently seeking
+                opportunities to grow through hands-on experience, internships,
+                or team-based development projects:
+              </p>
+
+              <div class="skill-button">
+                <div class="skill-icon">
+                  <img src="./images/images/REAL-REACT.png" alt="React" />
+                  <img src="./images/images/REAL-PYTHON.png" alt="Python" />
+                  <img src="./images/images/REAL-JAVACS.png" alt="JavaScript" />
+                  <img src="./images/images/REAL-TAILWIND.png" alt="Tailwind" />
+                  <img src="./images/images/REAL-HTML.png" alt="HTML" />
+                  <img src="./images/images/REAL-CSS.png" alt="CSS" />
+                  <img src="./images/images/REAL-QGIS.png" alt="QGIS" />
+                </div>
+
+                <div>
+                  <a
+                    class="download"
+                    href="./Adebayo Daniel Oluwatimileyin - Resume (1).pdf"
+                    >Download Resume</a
+                  >
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- about -->
+
+      <!-- project -->
+      <div id="projects" class="all-card">
+        <div class="project-top reveal-up">
+          <p class="project">Projects</p>
+
+          <div class="p-9">
+            <button class="active">All Projects</button>
+            <button>Frontend</button>
+          </div>
+        </div>
+
+        <div class="project-main">
+          <div class="-project-card reveal-up">
+            <img
+              class="img-project"
+              src="./Rectangle 9 (1).png"
+              alt="Onari B Website"
+            />
+
+            <div class="p-6">
+              <p class="p-1">Onari B Website</p>
+
+              <p class="p-2">
+                Working closely with the ONORI-B team, I collaborated to ensure
+                that the website not only met but exceeded their expectations.
+              </p>
+              <p class="p-5">Technologies Used</p>
+              <div class="p-3">
+                <img class="p-4" src="./images/images/react.png" alt="React" />
+                <img
+                  class="p-4"
+                  src="./images/images/java-scirpt.png"
+                  alt="JavaScript"
+                />
+                <img class="p-4" src="./images/images/tailwind.png" alt="Tailwind" />
+              </div>
+              <div class="p-button">
+                <button class="p-b-1">View live demo</button>
+                <button class="p-b-2">Visit Site</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="-project-card reveal-up delay-1">
+            <img
+              class="img-project"
+              src="./images/images/project-1.png"
+              alt="Onari B Website"
+            />
+
+            <div class="p-6">
+              <p class="p-1">Onari B Website</p>
+
+              <p class="p-2">
+                Working closely with the ONORI-B team, I collaborated to ensure
+                that the website not only met but exceeded their expectations.
+              </p>
+
+              <p class="p-5">Technologies Used</p>
+              <div class="p-3">
+                <img class="p-4" src="./images/images/react.png" alt="React" />
+                <img
+                  class="p-4"
+                  src="./images/images/java-scirpt.png"
+                  alt="JavaScript"
+                />
+                <img class="p-4" src="./images/images/tailwind.png" alt="Tailwind" />
+              </div>
+              <div class="p-button">
+                <button class="p-b-1">View Demo Live</button>
+                <button class="p-b-2">Visit Site</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="-project-card reveal-up delay-2">
+            <img
+              class="img-project"
+              src="./images/images/Rectangle 9.png"
+              alt="Onari B Website"
+            />
+
+            <div class="p-6">
+              <p class="p-1">Onari B Website</p>
+
+              <p class="p-2">
+                Working closely with the ONORI-B team, I collaborated to ensure
+                that the website not only met but exceeded their expectations.
+              </p>
+              <p class="p-5">Technologies Used</p>
+              <div class="p-3">
+                <img class="p-4" src="./images/images/react.png" alt="React" />
+                <img
+                  class="p-4"
+                  src="./images/images/java-scirpt.png"
+                  alt="JavaScript"
+                />
+                <img class="p-4" src="./images/images/tailwind.png" alt="Tailwind" />
+              </div>
+              <div class="p-button">
+                <button class="p-b-1">View Demo Live</button>
+                <button class="p-b-2">Visit Site</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="-project-card reveal-up delay-3">
+            <img
+              class="img-project"
+              src="./images/images/project-1.png"
+              alt="Onari B Website"
+            />
+
+            <div class="p-6">
+              <p class="p-1">Onari B Website</p>
+
+              <p class="p-2">
+                Working closely with the ONORI-B team, I collaborated to ensure
+                that the website not only met but exceeded their expectations.
+              </p>
+
+              <p class="p-5">Technologies Used</p>
+              <div class="p-3">
+                <img class="p-4" src="./images/images/react.png" alt="React" />
+                <img
+                  class="p-4"
+                  src="./images/images/java-scirpt.png"
+                  alt="JavaScript"
+                />
+                <img class="p-4" src="./images/images/tailwind.png" alt="Tailwind" />
+              </div>
+              <div class="p-button">
+                <button class="p-b-1">View Demo Live</button>
+                <button class="p-b-2">Visit Site</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- projects -->
+
+      <section id="contact" class="contact reveal-up">
+        <div class="contact-left">
+
+          <h3>Let's discuss on something <span>cool</span> together</h3>
+        </div>
+        <div class="contact-right">
+          <p class="card-text-1">I'm interested in...</p>
+          <div class="all-button">
+            <div class="button-top">
+              <button class="form-button-1 active">Frontend</button>
+              <button class="form-button-3">Others</button>
+            </div>
+          </div>
+
+          <form action="">
+            <input type="text" placeholder="Your Name" class="form-input-1" />
+            <input type="email" placeholder="Your Email" class="form-input-2" />
+            <input
+              type="text"
+              placeholder="Your Message"
+              class="form-input-3"
+            />
+            <div class="m-3">
+              <img src="./images/images/message-icon.png" alt="" />
+              <a class="form-button-4">Send Message</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="f-0 reveal-up">
+        <img class="f-image-1" src="./images/images/LOGO-WW.png" alt="Logo" />
+        <div class="footer-nav">
+          <a class="f1" href="#about">About</a>
+          <a class="f1" href="#projects">Projects</a>
+          <a class="f1" href="#contact">Contact</a>
+        </div>
+
+        <div class="icon-foot">
+          <a class="if" href="#"
+            ><img class="if" src="./images/images/Linkedin.png" alt="LinkedIn"
+          /></a>
+          <a class="if" href="#"
+            ><img class="if" src="./images/images/Whatsapp.png" alt="WhatsApp"
+          /></a>
+          <a class="if" href="#"
+            ><img class="if" src="./images/images/Gmail.png" alt="Gmail"
+          /></a>
+          <a class="if" href="#"
+            ><img class="if" src="./images/images/GitHub.png" alt="GitHub"
+          /></a>
+        </div>
+        <div class="rl">
+          <p class="rec-2"></p>
+          <p class="legal">© 2026 Daniel All Rights Reserved.</p>
+        </div>
+      </footer>
+      <script>
+        // Dark / light mode toggle
+        const modeToggle = document.getElementById("modeToggle");
+        const modeIcon = modeToggle.querySelector("i");
+
+        function syncModeIcon() {
+          const isDark = document.documentElement.classList.contains("dark");
+          modeIcon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+        }
+        syncModeIcon();
+
+        modeToggle.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          localStorage.setItem(
+            "theme",
+            document.documentElement.classList.contains("dark") ? "dark" : "light"
+          );
+          syncModeIcon();
+        });
+
+        // Mobile dropdown menu toggle
+        const toggleBtn = document.getElementById("toggleBtn");
+        const toggleBtnIcon = toggleBtn.querySelector("i");
+        const navLinks = document.getElementById("navLinks");
+
+        toggleBtn.onclick = () => {
+          const isOpen = navLinks.classList.toggle("open");
+          toggleBtn.setAttribute("aria-expanded", isOpen);
+          toggleBtnIcon.className = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtnIcon.className = "fa-solid fa-bars";
+          });
+        });
+
+        // Close menu on outside click
+        document.addEventListener("click", (e) => {
+          if (
+            navLinks.classList.contains("open") &&
+            !navLinks.contains(e.target) &&
+            !toggleBtn.contains(e.target)
+          ) {
+            navLinks.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtnIcon.className = "fa-solid fa-bars";
+          }
+        });
+
+        // Close menu on Escape key
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && navLinks.classList.contains("open")) {
+            navLinks.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtnIcon.className = "fa-solid fa-bars";
+          }
+        });
+
+        // Scroll-reveal animation for elements with reveal classes
+        const revealEls = document.querySelectorAll(
+          ".reveal-up, .reveal-left, .reveal-right",
+        );
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        revealEls.forEach((el) => revealObserver.observe(el));
+
+        // Project filter buttons (visual active state)
+        document.querySelectorAll(".p-9 button").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".p-9 button")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+          });
+        });
+
+        // Contact "interested in" toggle
+        document.querySelectorAll(".button-top button").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".button-top button")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>
