@@ -439,7 +439,7 @@ header {
 
 .-project-card {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  width: 563px;
+  width: 100%;
 }
 .-project-card:hover {
   transform: translateY(-8px);
@@ -501,6 +501,7 @@ header {
   height: 255px;
   overflow: hidden;
   transition: transform 0.4s ease;
+  width: 100%;
 }
 .-project-card:hover .img-project {
   transform: scale(1.03);
