@@ -1087,7 +1087,7 @@ html.dark .if {
   }
   .project-main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 350px;
 
     justify-content: center;
     padding: 2rem;
